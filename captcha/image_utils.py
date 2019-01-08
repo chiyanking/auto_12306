@@ -25,7 +25,6 @@ def read_data(image_dir, image_shape, label_path="labels.txt"):
         with io.open(label_path, encoding="utf-8") as file:
             for line in file:
                 class_name, id = line.strip().split()
-                print class_name, id
                 label_dict[class_name] = int(id)
     else:
         with io.open(label_path, "w", encoding="utf-8") as file:
